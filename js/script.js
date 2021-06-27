@@ -1,22 +1,19 @@
 'use strict';
 
-let question1 = `Итак, первый вопрос.<br> 2 в степени 5 = ?`;
-let question2 = `Следующий вопрос: <br> Сколько всего планет<br>
-в солнечной системе?`;
-let question3 = `Число "пи" равно<br>
-3 целых и ?? сотых`;
-let question4 = `Столица Ватикана?`;
-let question5 = `Последний вопрос,<br> рассчитанный
-на знатоков:<br>В каком году родился <br>
-Сергей Павлович Десятчиков?`;
+let question1 = `Итак, первый вопрос.<br> 5 в кубе = ?`;
+let question2 = `Следующий вопрос: <br>Сколько ног у паука?`;
+let question3 = `Желудь - плод какого дерева?`;
+let question4 = `Число звезд на флаге США<br> соответствует числу штатов<br> этой страны.<br>Так сколько их?`;
+let question5 = `Последний вопрос,<br> Сколько очков дает валет
+<br> в карточной игре "Двадцать одно"`;
 let q = [question1, question2, question3, question4, question5];
 
-let answers = ['32', '8', '14', 'ватикан', '1998'];
+let answers = ['125', '8', 'дуба', '50', '2'];
 
 
 
 function enteredNoName() {
-    userName = prompt('Вы не представились. Как к вам обращаться?', '');
+    userName = prompt('Это не ответ. Как тебя называть?', '');
     if (!userName) noName();
 }
 
@@ -25,7 +22,7 @@ let userName = prompt('Перед тем, как мы начнем, напиши
 if (userName === null || userName.trim() === "") enteredNoName();
 
 let difficulty = ['легко', 'нормально', 'сложно', 'невозможно'];
-let difficultyTime = [120, 30, 10, 1];
+let difficultyTime = [120, 30, 7, 1];
 let index;
 
 let rightAnswers = 0;
@@ -124,5 +121,6 @@ function nextQuestion() {
 function quizFinished() {
     main.innerHTML = `<i><ins>${userName}</ins></i>, викторина<br>
     на сложности "${difficulty[index]}"<br> завершена.<br><br>
+    Твой результат: ${Math.round(rightAnswers/q.length*100)}%<br>
     Отвечено верно <br>${result(rightAnswers)}`;
 }

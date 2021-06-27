@@ -5,7 +5,7 @@ function enteredNoName() {
     if (!userName) noName();
 }
 
-let userName = prompt('Перед тем, как мы начнем, напишите свое имя', '');
+let userName = prompt('Перед тем, как мы начнем, напиши свое имя', '');
 if (userName === null || userName.trim() === "") enteredNoName();
 // let userName = 'admin';
 

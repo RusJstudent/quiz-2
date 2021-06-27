@@ -1,13 +1,28 @@
 'use strict';
 
+let question1 = `Итак, первый вопрос.<br> 2 в степени 5 = ?`;
+let question2 = `Следующий вопрос: <br> Сколько всего планет<br>
+в солнечной системе?`;
+let question3 = `Число "пи" равно<br>
+3 целых и ?? сотых`;
+let question4 = `Столица Ватикана?`;
+let question5 = `Последний вопрос,<br> рассчитанный
+на знатоков:<br>В каком году родился <br>
+Сергей Павлович Десятчиков?`;
+let q = [question1, question2, question3, question4, question5];
+
+let answers = ['32', '8', '14', 'ватикан', '1998'];
+
+
+
 function enteredNoName() {
     userName = prompt('Вы не представились. Как к вам обращаться?', '');
     if (!userName) noName();
 }
 
 let userName = prompt('Перед тем, как мы начнем, напиши свое имя', '');
-if (userName === null || userName.trim() === "") enteredNoName();
 // let userName = 'admin';
+if (userName === null || userName.trim() === "") enteredNoName();
 
 let difficulty = ['легко', 'нормально', 'сложно', 'невозможно'];
 let difficultyTime = [120, 30, 10, 1];
@@ -38,6 +53,18 @@ function setDifficulty() {
     let timerId0 = setInterval(() => {
         if (difficulty.includes(input.value.toLowerCase()) ) {
             index = difficulty.indexOf(input.value.toLowerCase());
+
+            img0.hidden = true;
+            if (index === 0) {
+                img1.hidden = false;
+            } else if (index === 1) {
+                img2.hidden = false;
+            } else if (index === 2) {
+                img3.hidden = false;
+            } else if (index === 3) {
+                img4.hidden = false;
+            }
+
             input.value = "";
             clearInterval(timerId0);
             askQuestion(i);

@@ -35,13 +35,13 @@ let i = 1;
 setDifficulty();
 
 function result(num) {
-    return num === 0 ? `..да ни на сколько<br> вопросов, на ноль из ${q.length}<br><br>` :
-    num === 1 ? `всего на 1 вопрос  из ${q.length}<br><br>` :
-    (num === 2 || num === 3) ? `на ${rightAnswers} вопроса из ${q.length}<br><br>` :
-    (num === 4) ? `на ${rightAnswers} вопроса из ${q.length}<br><br>Хороший результат!<br><br>` :
+    return num === 0 ? `на ноль вопросов из ${q.length} \u{1F630}<br><br>` :
+    num === 1 ? `на один вопрос  из ${q.length} \u{1F615}<br><br>` :
+    (num === 2 || num === 3) ? `на ${rightAnswers} вопроса из ${q.length} \u{1F610}<br><br>` :
+    (num === 4) ? `на ${rightAnswers} вопроса из ${q.length}<br><br>Хороший результат! \u{263A}<br><br>` :
     (num === 5 && index === 3) ? `на ${rightAnswers} вопросов  из ${q.length}<br><br>
 Вы получили достижение <br>"Самые быстрые руки<br> на диком западе"\u{1F60E}`:
-    (num === 5) ? `на ${rightAnswers} вопросов  из ${q.length}<br><br>Отличный результат!` :
+    (num === 5) ? `на ${rightAnswers} вопросов  из ${q.length}<br><br>Отличный результат!\u{1F60A}` :
     `на.. подожди-ка ${rightAnswers} из ${q.length}<br>Это вообще законно?<br><br>`;
 }
 

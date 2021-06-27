@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+<div class="container">
+    <img src="images/4.jpg" alt="фон">
+    <div class="container-2">
+        <p id="qNum"></p>
+        <p id="main"></p>
+        <input id="input" type="text">
+        <p id="hurry" hidden>Поторопись!</p>
+        <p id="timer"></p>
+        <p id="isTrue"></p>
+    </div>
+</div>
+
+<script>
+let question1 = `Итак, первый вопрос.<br> 2 в степени 5 = ?`;
+let question2 = `Следующий вопрос: <br> Сколько всего планет<br>
+в солнечной системе?`;
+let question3 = `Число "пи" равно<br>
+3 целых и ?? сотых`;
+let question4 = `Столица Ватикана?`;
+let question5 = `Последний вопрос,<br> рассчитанный
+на знатоков:<br>В каком году родился <br>
+Сергей Павлович Десятчиков?`;
+let q = [question1, question2, question3, question4, question5];
+
+let answers = ['32', '8', '14', 'ватикан', '1998'];
+</script>
+</body>
+</html>

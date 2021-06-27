@@ -1,1 +1,1 @@
-# quiz-2
+# https://rusjstudent.github.io/quiz-2/

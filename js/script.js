@@ -12,14 +12,13 @@ let answers = ['125', '8', 'дуба', '50', '2'];
 
 
 
-function enteredNoName() {
-    userName = prompt('Это не ответ. Как тебя называть?', '');
-    if (!userName) noName();
-}
+// function enteredNoName() {
+//     userName = prompt('Это не ответ. Как тебя называть?', '');
+//     if (!userName) noName();
+// }
 
-let userName = prompt('Перед тем, как мы начнем, напиши свое имя', '');
-// let userName = 'admin';
-if (userName === null || userName.trim() === "") enteredNoName();
+// let userName = prompt('Перед тем, как мы начнем, напиши свое имя', '');
+// if (userName === null || userName.trim() === "") enteredNoName();
 
 let difficulty = ['легко', 'нормально', 'сложно', 'невозможно'];
 let difficultyTime = [120, 30, 7, 1];
@@ -118,8 +117,9 @@ function nextQuestion() {
     }, 1000 * (4 - index));
 }
 
+// <i><ins>${userName}</ins></i>, 
 function quizFinished() {
-    main.innerHTML = `<i><ins>${userName}</ins></i>, викторина<br>
+    main.innerHTML = `Викторина<br>
     на сложности "${difficulty[index]}"<br> завершена.<br><br>
     Твой результат: ${Math.round(rightAnswers/q.length*100)}%<br>
     Отвечено верно <br>${result(rightAnswers)}`;

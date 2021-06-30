@@ -10,13 +10,10 @@ let q = [question1, question2, question3, question4, question5];
 
 let answers = ['125', '8', 'дуба', '50', '2'];
 
-
-
 // function enteredNoName() {
 //     userName = prompt('Это не ответ. Как тебя называть?', '');
 //     if (!userName) noName();
 // }
-
 // let userName = prompt('Перед тем, как мы начнем, напиши свое имя', '');
 // if (userName === null || userName.trim() === "") enteredNoName();
 
